@@ -3,7 +3,7 @@ name: cumin
 on:
   push:
     branches:
-        - main
+        - master
 
 jobs:
   build:
