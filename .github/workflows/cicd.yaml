@@ -47,6 +47,6 @@ jobs:
               cd ~/githubaction_2
               git pull origin master
               sudo npm install
-              pm2 reload index.js
+              sudo pm2 reload index.js
 
 
