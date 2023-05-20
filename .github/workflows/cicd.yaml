@@ -33,11 +33,11 @@ jobs:
 
     steps:
       - name: SSH deploy
-        uses: appleboy/ssh-action@v.0.1.3
+        uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
           username:  ${{ secrets.USER }}
-          key:  ${{ secrets.KEY }}
+          key:  ${{ secrets.KEY }}git 
           port:  ${{ secrets.PORT }}
           script: |
               curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
