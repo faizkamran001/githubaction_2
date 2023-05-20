@@ -41,14 +41,13 @@ jobs:
           port:  ${{ secrets.PORT }}
           script: |
               curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
-               . ~/.nvm/nvm.sh
-               nvm install 14
-               npm install -g pm2
-               cd ~/CICD
-               git pull origin master
-               sudo npm install
-               sudo npm run build
-               pm2 restart api
-            
+              . ~/.nvm/nvm.sh
+              nvm install 14
+              npm install -g pm2
+              cd ~/githubaction_2/githubaction_2
+              git pull origin master
+              sudo npm install
+              sudo npm run build
+              pm2 reload index.js
 
 
